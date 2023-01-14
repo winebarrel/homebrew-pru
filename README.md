@@ -1,2 +1,3 @@
 # homebrew-pru
-homebrew-cronplan  Homebrew tap for pru.
+
+Homebrew tap for [pru](https://github.com/winebarrel/pru).
