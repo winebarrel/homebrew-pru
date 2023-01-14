@@ -5,21 +5,21 @@
 class Pru < Formula
   desc "pru is a CLI that updates the pull request branch from the base branch that contains the specified file."
   homepage "https://github.com/winebarrel/pru"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/pru/releases/download/v0.1.1/pru_0.1.1_darwin_amd64.tar.gz"
-      sha256 "7eb7b08197b69a2dbab7861882d588bdb0953fd00f59691e451e887f617d2f69"
+      url "https://github.com/winebarrel/pru/releases/download/v0.1.2/pru_0.1.2_darwin_amd64.tar.gz"
+      sha256 "97d494aeeed275ff3cee41b39fbea01a50c8259fed74f91e7116de5180f2d348"
 
       def install
         bin.install 'pru'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/pru/releases/download/v0.1.1/pru_0.1.1_darwin_arm64.tar.gz"
-      sha256 "3281cdf565fd477e39ff7c93e50af1a6ca18456b0451c8ed815b9717c49d8ebb"
+      url "https://github.com/winebarrel/pru/releases/download/v0.1.2/pru_0.1.2_darwin_arm64.tar.gz"
+      sha256 "8bc8a78899ef755590db51768b4ce86bd1cdcd555be855739d1328bdfba1fe8a"
 
       def install
         bin.install 'pru'
@@ -29,16 +29,16 @@ class Pru < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/pru/releases/download/v0.1.1/pru_0.1.1_linux_arm64.tar.gz"
-      sha256 "15e3efbc3f0f0c969ec95db9d5fba3c3b832519baf93bd7e5c81d9982c627888"
+      url "https://github.com/winebarrel/pru/releases/download/v0.1.2/pru_0.1.2_linux_arm64.tar.gz"
+      sha256 "6a4dc0f4c887ba057c48c125750a2ce4c0a2298b2d7b910c9ab35be3d6072f6b"
 
       def install
         bin.install 'pru'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/pru/releases/download/v0.1.1/pru_0.1.1_linux_amd64.tar.gz"
-      sha256 "3a525110f9ae33b1b8a55cc3b01680ae7d9a6d65a8237f3014b9f4581ceb2f36"
+      url "https://github.com/winebarrel/pru/releases/download/v0.1.2/pru_0.1.2_linux_amd64.tar.gz"
+      sha256 "65f05e16681f7a35b9dfb61560a02a35045b588cfb8a1b196a1422bab4539ddd"
 
       def install
         bin.install 'pru'
