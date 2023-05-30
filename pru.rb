@@ -5,21 +5,21 @@
 class Pru < Formula
   desc "pru is a tool that updates pull requests branch from the base branch that contains specified files."
   homepage "https://github.com/winebarrel/pru"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/pru/releases/download/v0.3.0/pru_0.3.0_darwin_amd64.tar.gz"
-      sha256 "b441474431503581e2fd2c6db92bac161685f635393ecfc75866aa51c651820d"
+    if Hardware::CPU.arm?
+      url "https://github.com/winebarrel/pru/releases/download/v0.3.1/pru_0.3.1_darwin_arm64.tar.gz"
+      sha256 "7c3e36b6f1683faaa3a78db8d4e017a8e87cb82ed53f956d7ebf490f7c36d84f"
 
       def install
         bin.install 'pru'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/winebarrel/pru/releases/download/v0.3.0/pru_0.3.0_darwin_arm64.tar.gz"
-      sha256 "40e218726fafcd4de85ae4f8c5e63c00dd5b664b2600b385d2c1084b6648d380"
+    if Hardware::CPU.intel?
+      url "https://github.com/winebarrel/pru/releases/download/v0.3.1/pru_0.3.1_darwin_amd64.tar.gz"
+      sha256 "2b0952cd345c2e9321d6681acb6437d428ef46bb84e1ecab7db92a91d9ad5e0b"
 
       def install
         bin.install 'pru'
@@ -29,16 +29,16 @@ class Pru < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/winebarrel/pru/releases/download/v0.3.0/pru_0.3.0_linux_amd64.tar.gz"
-      sha256 "11a39145897fb3478526ba99cf3a650d99b6513ded426a8e57aba9ee33ef2647"
+      url "https://github.com/winebarrel/pru/releases/download/v0.3.1/pru_0.3.1_linux_amd64.tar.gz"
+      sha256 "3654961869629b28d5c2c16eb1d9623f0280e7a01dfefe19c756e5467c0ea70f"
 
       def install
         bin.install 'pru'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/winebarrel/pru/releases/download/v0.3.0/pru_0.3.0_linux_arm64.tar.gz"
-      sha256 "f2a2f55472072af36de05c0c10de087fbe26bc7aaf73ff1ca13d19a3abc3c10a"
+      url "https://github.com/winebarrel/pru/releases/download/v0.3.1/pru_0.3.1_linux_arm64.tar.gz"
+      sha256 "07e9c5b420fa7d07bf7804fd43e5dfa923d9612d134035109c341b12efec3248"
 
       def install
         bin.install 'pru'
